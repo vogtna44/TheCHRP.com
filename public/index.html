@@ -3,62 +3,281 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TheCHRP — The Sound Board for Every Reaction</title>
+  <title>CHRP — Instant Reaction Sound Bites</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow: #FFD600;
+      --yellow-light: #FFE566;
+      --black: #0d0d0d;
+      --gray: #333;
+      --card-bg: #fff;
+    }
 
     body {
       min-height: 100vh;
       min-height: 100dvh;
+      background: linear-gradient(160deg, var(--yellow-light) 0%, var(--yellow) 100%);
+      color: var(--black);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       display: flex;
       flex-direction: column;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
       align-items: center;
-      justify-content: center;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      text-align: center;
-      padding: 2rem;
+      justify-content: space-between;
+      padding: 1.25rem 2rem;
     }
 
-    .logo {
-      font-size: clamp(3rem, 10vw, 6rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
+    .nav-logo {
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: var(--black);
+      text-decoration: none;
     }
 
-    .tagline {
-      font-size: clamp(1rem, 3vw, 1.4rem);
-      color: #888;
-      margin-bottom: 3rem;
-      max-width: 480px;
-    }
-
-    .cta {
+    .nav-cta {
       display: inline-block;
-      padding: 0.75rem 2rem;
-      background: #f5f5f5;
-      color: #0a0a0a;
+      padding: 0.5rem 1.25rem;
+      background: var(--black);
+      color: var(--yellow);
       border-radius: 999px;
-      font-size: 1rem;
-      font-weight: 600;
+      font-size: 0.875rem;
+      font-weight: 700;
       text-decoration: none;
       transition: opacity 0.2s;
     }
 
-    .cta:hover {
-      opacity: 0.85;
+    .nav-cta:hover { opacity: 0.8; }
+
+    /* ── HERO ── */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 8vw, 5.5rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      color: var(--black);
+      max-width: 14ch;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--gray);
+      max-width: 38ch;
+      line-height: 1.55;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 0.85rem 2.25rem;
+      background: var(--black);
+      color: var(--yellow);
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: opacity 0.2s;
+    }
+
+    .hero-cta:hover { opacity: 0.8; }
+
+    /* ── SOUNDS SECTION ── */
+    .sounds {
+      background: var(--black);
+      color: #f5f5f5;
+      padding: 4rem 2rem;
+    }
+
+    .sounds h2 {
+      text-align: center;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .sounds-sub {
+      text-align: center;
+      color: #888;
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .sounds-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .sound-card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 1.25rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+
+    .sound-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--yellow);
+    }
+
+    .sound-card .card-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--yellow);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .sound-card .card-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #f5f5f5;
+      text-align: center;
+    }
+
+    .sound-card .card-category {
+      font-size: 0.7rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      border-top: 1px solid #1e1e1e;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer-brand {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--yellow);
+      letter-spacing: -0.04em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: #f5f5f5; }
+
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #555;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
 <body>
-  <p class="logo">TheCHRP</p>
-  <p class="tagline">The sound board for every reaction. Now available on iPhone.</p>
-  <a class="cta" href="https://apps.apple.com/app/thechrp" target="_blank" rel="noopener">Download on the App Store</a>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="/">CHRP</a>
+    <a class="nav-cta" href="https://apps.apple.com/app/thechrp" target="_blank" rel="noopener">Get the app</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Instant reaction sound&nbsp;bites.</h1>
+    <p>Drop the perfect audio clip for every moment — hype, hype, and more hype. Right from your iPhone.</p>
+    <a class="hero-cta" href="https://apps.apple.com/app/thechrp" target="_blank" rel="noopener">Coming to the App&nbsp;Store</a>
+  </section>
+
+  <!-- SOUNDS -->
+  <section class="sounds">
+    <h2>Browse sounds</h2>
+    <p class="sounds-sub">A taste of what's in the catalog.</p>
+    <div class="sounds-grid">
+      <div class="sound-card">
+        <span class="card-icon">🙅</span>
+        <span class="card-title">No shot!</span>
+        <span class="card-category">Trending</span>
+      </div>
+      <div class="sound-card">
+        <span class="card-icon">🤯</span>
+        <span class="card-title">That's wild</span>
+        <span class="card-category">Reaction</span>
+      </div>
+      <div class="sound-card">
+        <span class="card-icon">🚀</span>
+        <span class="card-title">Let's go!</span>
+        <span class="card-category">Hype</span>
+      </div>
+      <div class="sound-card">
+        <span class="card-icon">😤</span>
+        <span class="card-title">Say less</span>
+        <span class="card-category">Vibes</span>
+      </div>
+      <div class="sound-card">
+        <span class="card-icon">😂</span>
+        <span class="card-title">Sheesh</span>
+        <span class="card-category">Trending</span>
+      </div>
+      <div class="sound-card">
+        <span class="card-icon">🔥</span>
+        <span class="card-title">No cap</span>
+        <span class="card-category">Hype</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-brand">CHRP</span>
+    <nav class="footer-links">
+      <a href="mailto:hello@thechrp.com">Contact</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+    <p class="footer-copy">&copy; 2025 TheCHRP. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

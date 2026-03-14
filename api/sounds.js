@@ -5,14 +5,64 @@
 
 const sounds = [
   {
-    id: "no_shot_01",
-    title: "No shot!",
-    transcript: "No shot.",
-    category: "Trending",
-    tags: ["reaction", "hype"],
-    synonyms: ["no way"],
-    duration: 2.0,
-    filename: "no_shot_01.m4a"
+    "id": "no_shot_01",
+    "title": "No shot!",
+    "transcript": "No shot.",
+    "category": "Trending",
+    "tags": ["reaction", "disbelief"],
+    "synonyms": ["no way", "impossible"],
+    "duration": 2.0,
+    "filename": "no_shot_01.m4a"
+  },
+  {
+    "id": "thats_wild_01",
+    "title": "That's wild",
+    "transcript": "That's wild.",
+    "category": "Reaction",
+    "tags": ["reaction", "surprise"],
+    "synonyms": ["crazy", "insane", "unbelievable"],
+    "duration": 1.8,
+    "filename": "thats_wild_01.m4a"
+  },
+  {
+    "id": "lets_go_01",
+    "title": "Let's go!",
+    "transcript": "Let's go!",
+    "category": "Hype",
+    "tags": ["hype", "energy"],
+    "synonyms": ["let's get it", "game on"],
+    "duration": 1.5,
+    "filename": "lets_go_01.m4a"
+  },
+  {
+    "id": "say_less_01",
+    "title": "Say less",
+    "transcript": "Say less.",
+    "category": "Vibes",
+    "tags": ["agreement", "chill"],
+    "synonyms": ["understood", "got it", "i hear you"],
+    "duration": 1.3,
+    "filename": "say_less_01.m4a"
+  },
+  {
+    "id": "sheesh_01",
+    "title": "Sheesh",
+    "transcript": "Sheesh.",
+    "category": "Trending",
+    "tags": ["reaction", "impressed"],
+    "synonyms": ["wow", "damn", "oh my"],
+    "duration": 1.6,
+    "filename": "sheesh_01.m4a"
+  },
+  {
+    "id": "no_cap_01",
+    "title": "No cap",
+    "transcript": "No cap.",
+    "category": "Hype",
+    "tags": ["truth", "hype"],
+    "synonyms": ["for real", "not lying", "facts"],
+    "duration": 1.4,
+    "filename": "no_cap_01.m4a"
   }
 ];
 
