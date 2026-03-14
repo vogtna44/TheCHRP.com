@@ -1,6 +1,11 @@
 import Foundation
 
 /// A single sound clip served by the CHRP catalog API.
+///
+/// Stage 1 fields (`id`, `title`, etc.) are always present.
+/// Stage 2 Chirp Card fields (`cardTitle`, `creatorTag`, `packName`) are optional
+/// and default to `nil` so existing JSON and call sites continue to work unchanged.
+/// See `PRODUCT.md` for the Chirp Card evolution and stage definitions.
 public struct Sound: Codable, Identifiable, Equatable {
     /// Unique identifier, e.g. `"no_shot_01"`.
     public let id: String
@@ -21,6 +26,24 @@ public struct Sound: Codable, Identifiable, Equatable {
     /// or a full URL to a hosted audio file.
     public let filename: String
 
+    // MARK: - Stage 2 Chirp Card fields (optional)
+
+    /// Short phrase shown on the Chirp Card tile (Stage 2).
+    /// When provided by the API, `displayTitle` returns this value instead of `title`.
+    public let cardTitle: String?
+    /// Creator attribution shown on the Chirp Card (Stage 2), e.g. `"@username"`.
+    public let creatorTag: String?
+    /// Pack or collection name shown on the Chirp Card (Stage 2), e.g. `"Hype Pack"`.
+    public let packName: String?
+
+    // MARK: - Derived
+
+    /// The phrase to display on the Chirp Card tile.
+    /// Returns `cardTitle` when the API provides one; otherwise falls back to `title`.
+    public var displayTitle: String { cardTitle ?? title }
+
+    // MARK: - Init
+
     public init(
         id: String,
         title: String,
@@ -29,7 +52,10 @@ public struct Sound: Codable, Identifiable, Equatable {
         tags: [String],
         synonyms: [String],
         duration: Double,
-        filename: String
+        filename: String,
+        cardTitle: String? = nil,
+        creatorTag: String? = nil,
+        packName: String? = nil
     ) {
         self.id = id
         self.title = title
@@ -39,6 +65,9 @@ public struct Sound: Codable, Identifiable, Equatable {
         self.synonyms = synonyms
         self.duration = duration
         self.filename = filename
+        self.cardTitle = cardTitle
+        self.creatorTag = creatorTag
+        self.packName = packName
     }
 
     // MARK: - Codable
@@ -48,6 +77,7 @@ public struct Sound: Codable, Identifiable, Equatable {
         case synonyms
         case synopsis
         case duration, filename
+        case cardTitle, creatorTag, packName
     }
 
     public init(from decoder: Decoder) throws {
@@ -65,6 +95,10 @@ public struct Sound: Codable, Identifiable, Equatable {
         }
         duration = try container.decode(Double.self, forKey: .duration)
         filename = try container.decode(String.self, forKey: .filename)
+        // Stage 2 Chirp Card fields — optional; nil when absent from the API response.
+        cardTitle = try container.decodeIfPresent(String.self, forKey: .cardTitle)
+        creatorTag = try container.decodeIfPresent(String.self, forKey: .creatorTag)
+        packName = try container.decodeIfPresent(String.self, forKey: .packName)
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -77,5 +111,8 @@ public struct Sound: Codable, Identifiable, Equatable {
         try container.encode(synonyms, forKey: .synonyms)
         try container.encode(duration, forKey: .duration)
         try container.encode(filename, forKey: .filename)
+        try container.encodeIfPresent(cardTitle, forKey: .cardTitle)
+        try container.encodeIfPresent(creatorTag, forKey: .creatorTag)
+        try container.encodeIfPresent(packName, forKey: .packName)
     }
 }

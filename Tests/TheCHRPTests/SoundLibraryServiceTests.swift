@@ -116,6 +116,97 @@ final class SoundModelTests: XCTestCase {
         XCTAssertEqual(sounds.count, 1)
         XCTAssertEqual(sounds[0].filename, "https://thechrp.com/audio/no_shot_01.m4a")
     }
+
+    // MARK: - Stage 2 Chirp Card field tests
+
+    func testDisplayTitleFallsBackToTitleWhenCardTitleIsAbsent() throws {
+        let json = """
+        {
+            "id": "no_shot_01",
+            "title": "No shot!",
+            "transcript": "No shot.",
+            "category": "Trending",
+            "tags": ["reaction", "hype"],
+            "synonyms": ["no way"],
+            "duration": 2.0,
+            "filename": "no_shot_01.m4a"
+        }
+        """.data(using: .utf8)!
+
+        let sound = try JSONDecoder().decode(Sound.self, from: json)
+
+        XCTAssertNil(sound.cardTitle)
+        XCTAssertNil(sound.creatorTag)
+        XCTAssertNil(sound.packName)
+        XCTAssertEqual(sound.displayTitle, "No shot!")
+    }
+
+    func testDisplayTitlePrefersCardTitleWhenPresent() throws {
+        let json = """
+        {
+            "id": "no_shot_01",
+            "title": "No shot!",
+            "cardTitle": "No shot 🙅",
+            "creatorTag": "@chrp",
+            "packName": "Reaction Pack",
+            "transcript": "No shot.",
+            "category": "Trending",
+            "tags": ["reaction", "hype"],
+            "synonyms": ["no way"],
+            "duration": 2.0,
+            "filename": "no_shot_01.m4a"
+        }
+        """.data(using: .utf8)!
+
+        let sound = try JSONDecoder().decode(Sound.self, from: json)
+
+        XCTAssertEqual(sound.cardTitle, "No shot 🙅")
+        XCTAssertEqual(sound.creatorTag, "@chrp")
+        XCTAssertEqual(sound.packName, "Reaction Pack")
+        XCTAssertEqual(sound.displayTitle, "No shot 🙅")
+    }
+
+    func testInitDefaultsStage2FieldsToNil() {
+        let sound = Sound(
+            id: "test_01",
+            title: "Test",
+            transcript: "Test.",
+            category: "Test",
+            tags: [],
+            synonyms: [],
+            duration: 1.0,
+            filename: "test_01.m4a"
+        )
+
+        XCTAssertNil(sound.cardTitle)
+        XCTAssertNil(sound.creatorTag)
+        XCTAssertNil(sound.packName)
+        XCTAssertEqual(sound.displayTitle, "Test")
+    }
+
+    func testEncodingAndDecodingRoundTripWithStage2Fields() throws {
+        let original = Sound(
+            id: "no_shot_01",
+            title: "No shot!",
+            transcript: "No shot.",
+            category: "Trending",
+            tags: ["reaction"],
+            synonyms: ["no way"],
+            duration: 2.0,
+            filename: "no_shot_01.m4a",
+            cardTitle: "No shot 🙅",
+            creatorTag: "@chrp",
+            packName: "Reaction Pack"
+        )
+
+        let data = try JSONEncoder().encode(original)
+        let decoded = try JSONDecoder().decode(Sound.self, from: data)
+
+        XCTAssertEqual(decoded.cardTitle, "No shot 🙅")
+        XCTAssertEqual(decoded.creatorTag, "@chrp")
+        XCTAssertEqual(decoded.packName, "Reaction Pack")
+        XCTAssertEqual(decoded.displayTitle, "No shot 🙅")
+    }
 }
 
 // MARK: - CHRPSoundAPI tests
