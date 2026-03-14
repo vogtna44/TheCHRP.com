@@ -6,6 +6,9 @@ CHRP — a sound board for every reaction, coming soon to iPhone.
 
 ```
 TheCHRP.com/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml       # GitHub Actions → deploys to Vercel on push to main
 ├── api/
 │   └── sounds.js        # Vercel serverless function → GET /api/sounds
 ├── public/
@@ -39,11 +42,24 @@ Add new sounds by appending objects to the `sounds` array in `api/sounds.js`.
 
 ## Deploying to Vercel
 
-1. Push this repo to GitHub (already done).
-2. Go to [vercel.com](https://vercel.com) → **Add New → Project** → import this repo.
-3. Leave the build settings at their defaults (no framework detected) and click **Deploy**.
-4. In **Project Settings → Domains**, add `thechrp.com`.  
+Deployments run automatically via GitHub Actions on every push to `main`.  
+The workflow lives at `.github/workflows/deploy.yml`.
+
+### One-time setup (required before the first deployment)
+
+1. Go to [vercel.com](https://vercel.com) → **Add New → Project** → import this repo.  
+   Complete the Vercel project creation (no build command needed; click **Deploy** to create the project — this first deploy may fail, that's OK).
+2. Retrieve the three values you need for GitHub:
+   - **VERCEL_TOKEN** — [vercel.com/account/tokens](https://vercel.com/account/tokens) → create a new token.
+   - **VERCEL_ORG_ID** — found in **Vercel project settings → General** (your team/personal account ID).
+   - **VERCEL_PROJECT_ID** — found in **Vercel project settings → General**.
+3. Add these as repository secrets in GitHub:  
+   **GitHub repo → Settings → Secrets and variables → Actions → New repository secret**  
+   Add `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID`.
+4. In **Vercel Project Settings → Domains**, add `thechrp.com`.  
    Vercel will display the DNS records to add in GoDaddy (typically an `A` record and/or `CNAME`).
+
+Once the secrets are saved, merge any PR into `main` and the GitHub Action will deploy automatically.
 
 ### GoDaddy DNS (one-time)
 
