@@ -29,6 +29,29 @@ public protocol SoundLibraryService {
 // MARK: - Remote implementation
 
 /// Fetches the sound catalog from the CHRP website API.
+///
+/// ### Expected JSON shape
+///
+/// Each element in the returned array must include the required Stage 1 fields.
+/// The optional Stage 2 Chirp Card fields (`cardTitle`, `creatorTag`, `packName`)
+/// may be omitted or `null`; the `Sound` model defaults them to `nil`.
+/// See `PRODUCT.md` and `COPILOT_BRIEF_LANDING.md` for the full API contract.
+///
+/// ```json
+/// {
+///   "id":         "no_shot_01",
+///   "title":      "No shot!",
+///   "transcript": "No shot.",
+///   "category":   "Trending",
+///   "tags":       ["reaction", "disbelief"],
+///   "synonyms":   ["no way", "impossible"],
+///   "duration":   2.0,
+///   "filename":   "no_shot_01.m4a",
+///   "cardTitle":  "No shot 🙅",
+///   "creatorTag": "@chrp",
+///   "packName":   "Reaction Pack"
+/// }
+/// ```
 public final class RemoteSoundLibraryService: SoundLibraryService {
     private let url: URL
     private let session: URLSession
