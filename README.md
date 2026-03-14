@@ -54,9 +54,26 @@ Add new sounds by appending objects to the `sounds` array in `api/sounds.js`.
 
 *(Vercel shows the exact values in Project Settings → Domains once you add the domain.)*
 
-After DNS propagates, visit:
-- `https://thechrp.com` — landing page
-- `https://thechrp.com/api/sounds` — JSON array (used by the iOS app automatically)
+### Step 5 — Wait for DNS propagation, then verify
+
+After you save the DNS records in GoDaddy, you're done on your end.
+**DNS propagation** is the automatic process by which name servers worldwide
+flush their old cache and start directing `thechrp.com` to Vercel's servers.
+You don't need to do anything — it happens on its own.
+
+| Time after saving DNS | Typical status |
+|---|---|
+| 0 – 15 min | Your own device may still reach the old host |
+| 15 min – 2 hrs | Most visitors worldwide see the new site |
+| 2 – 48 hrs | All remaining ISPs/CDN nodes catch up |
+
+**Check progress:** go to [dnschecker.org](https://dnschecker.org), type `thechrp.com`, and watch the checkmarks turn green globally.
+
+**Confirm it's fully live** (use a private/incognito window to bypass your local DNS cache):
+
+- `https://thechrp.com` → should show the landing page ✅
+- `https://thechrp.com/api/sounds` → should return the JSON array ✅  
+  Once this URL returns JSON, the iOS app automatically loads the sound catalog from the live server — no app update required.
 
 ## Swift Package
 
