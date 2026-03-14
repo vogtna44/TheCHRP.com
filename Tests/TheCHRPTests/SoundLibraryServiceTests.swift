@@ -69,6 +69,32 @@ final class SoundModelTests: XCTestCase {
         XCTAssertEqual(sound.filename, "no_shot_01.m4a")
     }
 
+    func testDecodingFromJSONWithSynopsisKey() throws {
+        let json = """
+        {
+            "id": "no_shot_01",
+            "title": "No shot!",
+            "transcript": "No shot.",
+            "category": "Trending",
+            "tags": ["reaction", "hype"],
+            "synopsis": ["no way"],
+            "duration": 2.0,
+            "filename": "no_shot_01.m4a"
+        }
+        """.data(using: .utf8)!
+
+        let sound = try JSONDecoder().decode(Sound.self, from: json)
+
+        XCTAssertEqual(sound.id, "no_shot_01")
+        XCTAssertEqual(sound.title, "No shot!")
+        XCTAssertEqual(sound.transcript, "No shot.")
+        XCTAssertEqual(sound.category, "Trending")
+        XCTAssertEqual(sound.tags, ["reaction", "hype"])
+        XCTAssertEqual(sound.synonyms, ["no way"])
+        XCTAssertEqual(sound.duration, 2.0, accuracy: 0.001)
+        XCTAssertEqual(sound.filename, "no_shot_01.m4a")
+    }
+
     func testDecodingArrayFromJSON() throws {
         let json = """
         [
