@@ -1,0 +1,164 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "TheCHRP-x86_64-unknown-linux-gnu-debug.module": ["<TheCHRP-x86_64-unknown-linux-gnu-debug.module>"]
+  "TheCHRPPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module": ["<TheCHRPPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module>"]
+  "TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.module": ["<TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.module>"]
+  "TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.test": ["<TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.test>"]
+  "TheCHRPTests-x86_64-unknown-linux-gnu-debug.module": ["<TheCHRPTests-x86_64-unknown-linux-gnu-debug.module>"]
+  "main": ["<TheCHRP-x86_64-unknown-linux-gnu-debug.module>"]
+  "test": ["<TheCHRP-x86_64-unknown-linux-gnu-debug.module>","<TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.test>","<TheCHRPTests-x86_64-unknown-linux-gnu-debug.module>"]
+default: "main"
+nodes:
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/Tests/TheCHRPTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/TheCHRP.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRP.swiftmodule"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/TheCHRP.swiftmodule.o"]
+    description: "Wrapping AST for TheCHRP for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRP.swiftmodule","-o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/TheCHRP.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Models/Sound.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/AudioPreviewService.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/FallbackSoundLibraryService.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/SoundLibraryService.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/ViewModels/SoundListViewModel.swift"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/sources"]
+    description: "Write auxiliary file /home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/sources"
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPPackageDiscoveredTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPPackageDiscoveredTests.swiftmodule.o"]
+    description: "Wrapping AST for TheCHRPPackageDiscoveredTests for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule","-o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPPackageDiscoveredTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/TheCHRPTests.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/all-discovered-tests.swift"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/sources"]
+    description: "Write auxiliary file /home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/sources"
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/all-discovered-tests.swift":
+    tool: test-discovery-tool
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/SoundLibraryServiceTests.swift.o"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/TheCHRPTests.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/all-discovered-tests.swift"]
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/TheCHRPPackageTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageTests.swiftmodule"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/TheCHRPPackageTests.swiftmodule.o"]
+    description: "Wrapping AST for TheCHRPPackageTests for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageTests.swiftmodule","-o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/TheCHRPPackageTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.derived/runner.swift"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/sources"]
+    description: "Write auxiliary file /home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/sources"
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.derived/runner.swift"]
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/TheCHRP.swiftmodule.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPPackageDiscoveredTests.swiftmodule.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPTests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/TheCHRPPackageTests.swiftmodule.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/runner.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/SoundLibraryServiceTests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/TheCHRPTests.swiftmodule.o"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.product/Objects.LinkFileList"
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/TheCHRPTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/TheCHRPTests.swiftmodule.o"]
+    description: "Wrapping AST for TheCHRPTests for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule","-o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/TheCHRPTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/runner/work/TheCHRP.com/TheCHRP.com/Tests/TheCHRPTests/SoundLibraryServiceTests.swift"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/sources"]
+    description: "Write auxiliary file /home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/sources"
+
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/usr/share/swift/usr/bin/swiftc"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+
+  "<TheCHRP-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRP.swiftmodule"]
+    outputs: ["<TheCHRP-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "<TheCHRPPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPTests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule"]
+    outputs: ["<TheCHRPPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "<TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/runner.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageTests.swiftmodule"]
+    outputs: ["<TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "<TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.test>":
+    tool: phony
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.xctest"]
+    outputs: ["<TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.test>"]
+
+  "<TheCHRPTests-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/SoundLibraryServiceTests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule"]
+    outputs: ["<TheCHRPTests-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "C.TheCHRP-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Models/Sound.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/AudioPreviewService.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/FallbackSoundLibraryService.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/SoundLibraryService.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/ViewModels/SoundListViewModel.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/sources"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRP.swiftmodule"]
+    description: "Compiling Swift Module 'TheCHRP' (5 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","TheCHRP","-emit-dependencies","-emit-module","-emit-module-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRP.swiftmodule","-output-file-map","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/sources","-I","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j4","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/include/TheCHRP-Swift.h","-color-diagnostics","-swift-version","5","-g","-Xcc","-fPIC","-Xcc","-g","-package-name","thechrp_com","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.TheCHRPPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/TheCHRPTests.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/all-discovered-tests.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/sources"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPTests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule"]
+    description: "Compiling Swift Module 'TheCHRPPackageDiscoveredTests' (2 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","TheCHRPPackageDiscoveredTests","-emit-dependencies","-emit-module","-emit-module-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule","-output-file-map","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/sources","-I","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j4","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/include/TheCHRPPackageDiscoveredTests-Swift.h","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-package-name","thechrp_com","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.derived/runner.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/sources"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/runner.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'TheCHRPPackageTests' (1 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","TheCHRPPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageTests.swiftmodule","-output-file-map","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/sources","-I","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j4","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/include/TheCHRPPackageTests-Swift.h","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-package-name","thechrp_com","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.test":
+    tool: shell
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/TheCHRP.swiftmodule.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPPackageDiscoveredTests.swiftmodule.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPTests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/TheCHRPPackageTests.swiftmodule.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/runner.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/SoundLibraryServiceTests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/TheCHRPTests.swiftmodule.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.xctest"]
+    description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.xctest"
+    args: ["/usr/share/swift/usr/bin/swiftc","-L","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug","-o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.xctest","-module-name","TheCHRPPackageTests","-emit-executable","-Xlinker","-rpath=$ORIGIN","@/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-g"]
+
+  "C.TheCHRPTests-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/Tests/TheCHRPTests/SoundLibraryServiceTests.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRP.swiftmodule","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/sources"]
+    outputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/SoundLibraryServiceTests.swift.o","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule"]
+    description: "Compiling Swift Module 'TheCHRPTests' (1 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","TheCHRPTests","-emit-dependencies","-emit-module","-emit-module-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule","-output-file-map","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/sources","-I","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j4","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","5","-g","-Xcc","-fPIC","-Xcc","-g","-package-name","thechrp_com","-Xcc","-fno-omit-frame-pointer"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/","/home/runner/work/TheCHRP.com/TheCHRP.com/Tests/TheCHRPTests/","/home/runner/work/TheCHRP.com/TheCHRP.com/Package.swift","/home/runner/work/TheCHRP.com/TheCHRP.com/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

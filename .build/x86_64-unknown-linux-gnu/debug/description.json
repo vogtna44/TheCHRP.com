@@ -1,0 +1,795 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.xctest",
+      "packagePath" : "/home/runner/work/TheCHRP.com/TheCHRP.com",
+      "productName" : "TheCHRPPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+    "TheCHRPPackageDiscoveredTests"
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.TheCHRP-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/sources",
+      "importPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Models/Sound.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/AudioPreviewService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/FallbackSoundLibraryService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/SoundLibraryService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/ViewModels/SoundListViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "TheCHRP",
+      "moduleOutputPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRP.swiftmodule",
+      "objects" : [
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.swift.o",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.swift.o",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.swift.o",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.swift.o",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/include/TheCHRP-Swift.h",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "thechrp_com",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRP.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Models/Sound.swift",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/AudioPreviewService.swift",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/FallbackSoundLibraryService.swift",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/SoundLibraryService.swift",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/ViewModels/SoundListViewModel.swift"
+      ],
+      "tempsPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.TheCHRPPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/sources",
+      "importPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/TheCHRPTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/all-discovered-tests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "TheCHRPPackageDiscoveredTests",
+      "moduleOutputPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPTests.swift.o",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/all-discovered-tests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/include/TheCHRPPackageDiscoveredTests-Swift.h",
+        "-color-diagnostics",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "thechrp_com",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/all-discovered-tests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/TheCHRPTests.swift",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/all-discovered-tests.swift"
+      ],
+      "tempsPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.TheCHRPPackageTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/sources",
+      "importPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "TheCHRPPackageTests",
+      "moduleOutputPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/include/TheCHRPPackageTests-Swift.h",
+        "-color-diagnostics",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "thechrp_com",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.TheCHRPTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/sources",
+      "importPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Tests/TheCHRPTests/SoundLibraryServiceTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRP.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "TheCHRPTests",
+      "moduleOutputPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/SoundLibraryServiceTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "thechrp_com",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/SoundLibraryServiceTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/TheCHRP.com/TheCHRP.com/Tests/TheCHRPTests/SoundLibraryServiceTests.swift"
+      ],
+      "tempsPath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "TheCHRP" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "TheCHRP",
+      "-package-name",
+      "thechrp_com",
+      "-c",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Models/Sound.swift",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/AudioPreviewService.swift",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/FallbackSoundLibraryService.swift",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/SoundLibraryService.swift",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/ViewModels/SoundListViewModel.swift",
+      "-I",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/include/TheCHRP-Swift.h",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "thechrp_com",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "TheCHRPPackageDiscoveredTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "TheCHRPPackageDiscoveredTests",
+      "-package-name",
+      "thechrp_com",
+      "-c",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/TheCHRPTests.swift",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/all-discovered-tests.swift",
+      "-I",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/include/TheCHRPPackageDiscoveredTests-Swift.h",
+      "-color-diagnostics",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "thechrp_com",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "TheCHRPPackageTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "TheCHRPPackageTests",
+      "-package-name",
+      "thechrp_com",
+      "-c",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.derived/runner.swift",
+      "-I",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/include/TheCHRPPackageTests-Swift.h",
+      "-color-diagnostics",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "thechrp_com",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "TheCHRPTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "TheCHRPTests",
+      "-package-name",
+      "thechrp_com",
+      "-c",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/Tests/TheCHRPTests/SoundLibraryServiceTests.swift",
+      "-I",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "thechrp_com",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "TheCHRP" : [
+
+    ],
+    "TheCHRPPackageDiscoveredTests" : [
+      "TheCHRPTests",
+      "TheCHRP"
+    ],
+    "TheCHRPPackageTests" : [
+      "TheCHRPPackageDiscoveredTests",
+      "TheCHRPTests",
+      "TheCHRP"
+    ],
+    "TheCHRPTests" : [
+      "TheCHRP"
+    ]
+  },
+  "testDiscoveryCommands" : {
+    "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/all-discovered-tests.swift" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/SoundLibraryServiceTests.swift.o"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/TheCHRPTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/all-discovered-tests.swift"
+        }
+      ]
+    }
+  },
+  "testEntryPointCommands" : {
+    "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.derived/runner.swift" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/Modules/TheCHRPPackageDiscoveredTests.swiftmodule"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Models/Sound.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/AudioPreviewService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/FallbackSoundLibraryService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/SoundLibraryService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/ViewModels/SoundListViewModel.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/sources"
+    },
+    "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/TheCHRPTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.derived/all-discovered-tests.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/sources"
+    },
+    "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/sources"
+    },
+    "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/TheCHRP.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPPackageDiscoveredTests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/TheCHRPTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageDiscoveredTests.build/all-discovered-tests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/TheCHRPPackageTests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/SoundLibraryServiceTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/TheCHRPTests.swiftmodule.o"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPPackageTests.product/Objects.LinkFileList"
+    },
+    "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/TheCHRP.com/TheCHRP.com/Tests/TheCHRPTests/SoundLibraryServiceTests.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRPTests.build/sources"
+    },
+    "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/usr/share/swift/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+    }
+  }
+}

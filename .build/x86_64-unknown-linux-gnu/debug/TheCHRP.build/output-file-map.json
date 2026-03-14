@@ -1,0 +1,40 @@
+{
+  "": {
+    "swift-dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/master.swiftdeps"
+  },
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Models/Sound.swift": {
+    "dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.d",
+    "object": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.swift.o",
+    "swiftmodule": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.swiftdeps",
+    "diagnostics": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/Sound.dia"
+  },
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/AudioPreviewService.swift": {
+    "dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.d",
+    "object": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.swift.o",
+    "swiftmodule": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.swiftdeps",
+    "diagnostics": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/AudioPreviewService.dia"
+  },
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/FallbackSoundLibraryService.swift": {
+    "dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.d",
+    "object": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.swift.o",
+    "swiftmodule": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.swiftdeps",
+    "diagnostics": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/FallbackSoundLibraryService.dia"
+  },
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/Services/SoundLibraryService.swift": {
+    "dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.d",
+    "object": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.swift.o",
+    "swiftmodule": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.swiftdeps",
+    "diagnostics": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundLibraryService.dia"
+  },
+  "/home/runner/work/TheCHRP.com/TheCHRP.com/Sources/TheCHRP/ViewModels/SoundListViewModel.swift": {
+    "dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.d",
+    "object": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.swift.o",
+    "swiftmodule": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.swiftdeps",
+    "diagnostics": "/home/runner/work/TheCHRP.com/TheCHRP.com/.build/x86_64-unknown-linux-gnu/debug/TheCHRP.build/SoundListViewModel.dia"
+  }
+}
